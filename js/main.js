@@ -186,38 +186,38 @@ $(function () {
   /**
 		Validate Form 2
 	**/
-  if ($(".cform-two").length) {
-    $("#cform-two").validate({
-      rules: {
-        name: {
-          required: true,
-        },
-        email: {
-          required: true,
-          email: true,
-        },
-        message: {
-          required: true,
-        },
-        checkmark: {
-          required: true,
-        },
-      },
-      success: "valid",
-      submitHandler: function () {
-        $.ajax({
-          url: "mailer/feedback-two.php",
-          type: "post",
-          dataType: "json",
-          data: "name=" + $("#cform-two").find('input[name="name"]').val() + "&email=" + $("#cform-two").find('input[name="email"]').val() + "&message=" + $("#cform-two").find('textarea[name="message"]').val(),
-          beforeSend: function () {},
-          complete: function () {},
-          success: function (data) {
-            $("#cform-two").fadeOut();
-            $(".alert-success").delay(1000).fadeIn();
-          },
-        });
-      },
-    });
-  }
+  // if ($(".cform-two").length) {
+  //   $("#cform-two").validate({
+  //     rules: {
+  //       name: {
+  //         required: true,
+  //       },
+  //       email: {
+  //         required: true,
+  //         email: true,
+  //       },
+  //       message: {
+  //         required: true,
+  //       },
+  //       checkmark: {
+  //         required: true,
+  //       },
+  //     },
+  //     success: "valid",
+  //     submitHandler: function () {
+  //       $.ajax({
+  //         url: "mailer/feedback-two.php",
+  //         type: "post",
+  //         dataType: "json",
+  //         data: "name=" + $("#cform-two").find('input[name="name"]').val() + "&email=" + $("#cform-two").find('input[name="email"]').val() + "&message=" + $("#cform-two").find('textarea[name="message"]').val(),
+  //         beforeSend: function () {},
+  //         complete: function () {},
+  //         success: function (data) {
+  //           $("#cform-two").fadeOut();
+  //           $(".alert-success").delay(1000).fadeIn();
+  //         },
+  //       });
+  //     },
+  //   });
+  // }
 });
